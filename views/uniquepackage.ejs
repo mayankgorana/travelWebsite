@@ -1,0 +1,34 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<% if (locals.package) { %>
+  <section class="package-hero-section">
+    <div class="package-container">
+      <!-- Left: Image -->
+      <div class="package-image">
+        <img src="<%= package.image %>" alt="<%= package.heading %>">
+      </div>
+
+      <!-- Right: Info -->
+      <div class="package-info">
+        <h1 class="package-heading"><%= package.heading %></h1>
+        <p class="package-meta">🕒 <strong>Duration:</strong> <%= package.duration %></p>
+        <p class="package-meta">📍 <strong>Location:</strong> <%= package.place %></p>
+        <div class="package-price">
+          <span class="strike">₹<%= package.strikeprice %></span>
+          <span class="discount">₹<%= package.discountprice %></span>
+        </div>
+        <% if(package.description) { %>
+        <div class="package-description">
+          <h3>Description</h3>
+          <p><%= package.description %></p>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </section>
+<% } else { %>
+  <h1>Something Went Wrong</h1>
+<% } %>
+
+<%- include('partials/footer.ejs') %>

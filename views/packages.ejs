@@ -1,0 +1,55 @@
+<%- include('partials/header.ejs') %>
+    <div id="loader">
+        <h3>Discover</h3>
+        <h3>Our</h3>
+        <h3>Packages</h3>
+        <h3>.</h3>
+        <h3>.</h3>
+    </div>
+    <%- include('partials/navbar.ejs') %>
+        <div class="membership__section"
+            style="padding:10px 0; background-color: #b3b3b32b !important; color:#000; overflow-x: hidden;">
+            <h1 class="an-membership">Our Tours</h1>
+            <p class="membership__desc an-membership">
+                Discover the Extraordinary: Where Every Adventure Begins.</p>
+            <div class="membership__wrapper">
+                <% packages.forEach(package=> { %>
+                    <div class="membership__card an-cards">
+                        <a href="/packages/<%=package.heading%>">
+                            <div class="membership__title">
+                                <div class="card">
+                                    <img src=<%=package.image %>
+                                    alt="Image">
+                                    <div class="stars">
+                                        <% for(var i=0; i<package.stars; i++){ %>
+                                            <span class="star checked">★</span>
+                                            <%}%>
+                                                <% for(var j=package.stars; j<5; j++){ %>
+                                                    <span class="star">★</span>
+                                                    <%}%>
+                                                        <span style="font-size: 16px;">(<%= package.reviews %>
+                                                                Review)</span></span>
+                                    </div>
+                                    <h3>
+                                        <%= package.heading %>
+                                    </h3>
+                                    <p class="duration">
+                                        📅 Duration: <%= package.duration %>
+                                    </p>
+                                    <p class="place">
+                                    📍 Location: <%= package.place %>
+                                    </p>
+                                    <p><span class="strike-through">
+                                            $<%= package.strikeprice %>
+                                        </span> <span class="discounted-price">
+                                            $<%= package.discountprice %>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+        <%- include('partials/footer.ejs') %>

@@ -1,0 +1,47 @@
+<%- include('partials/header.ejs') %>
+  <div id="loader">
+    <h3>Discover</h3>
+    <h3>Your</h3>
+    <h3>World</h3>
+    <h3>.</h3>
+    <h3>.</h3>
+  </div>
+  <%- include('partials/navbar.ejs') %>
+
+    <%- include('partials/heropartial.ejs') %>
+
+      <%- include('partials/servicepartial.ejs') %>
+
+        <%- include('partials/planpartial.ejs') %>
+
+          <%- include('partials/teampartial.ejs') %>
+
+            <!-- Email Section -->
+            <div class="email" id="emailcontent">
+              <video autoplay muted loop class="video-background">
+                <source
+                  src="https://videos.pexels.com/video-files/19857889/19857889-sd_640_360_30fps.mp4"
+                  type="video/mp4">
+
+                Your browser does not support the video tag.
+              </video>
+              <div class="dark-overlay"></div> <!-- New overlay div -->
+              <div class="email__content">
+                <h1 class="an-email">Get Access to Members Only Perks</h1>
+                <p class="an-email">
+                  Sign up for our newsletter below to get $50 off your first solo trip!
+                </p>
+                <form id="subscribeForm" class="an-email" action="/subscribe" method="post">
+                  <div class="form__wrap">
+                    <label for="email">
+                      <input id="emailInput" type="email" name="email" placeholder="Enter your email" required />
+                    </label>
+                    <button id="subscribeButton" class="button" type="submit">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div style="height: 0.5vh; background-color: rgb(208, 208, 208)"></div>
+
+            <%- include('partials/footer.ejs') %>
