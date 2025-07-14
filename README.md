@@ -2,7 +2,11 @@
 
 A dynamic and interactive travel booking website built using **Node.js**, **Express.js**, **PostgreSQL**, **EJS**, and **GSAP**. This project features dynamic package rendering, newsletter integration via Mailchimp API, and beautiful animations using GSAP.
 
-![Demo Screenshot](public/images/demo.png) <!-- Replace with your actual screenshot path -->
+<img width="1919" height="968" alt="image" src="https://github.com/user-attachments/assets/836b492d-7b9e-47e2-be9f-1344e07ec647" />
+ <!-- Replace with your actual screenshot path -->
+<img width="1919" height="966" alt="image" src="https://github.com/user-attachments/assets/c5b67727-fe9c-436a-af04-6330b4304b21" />
+<img width="1916" height="969" alt="image" src="https://github.com/user-attachments/assets/6754247e-0503-493e-8089-49af5f680b5a" />
+<img width="1919" height="968" alt="image" src="https://github.com/user-attachments/assets/0c74d46b-9e29-49aa-a5da-a5b72d5dbccc" />
 
 ---
 
